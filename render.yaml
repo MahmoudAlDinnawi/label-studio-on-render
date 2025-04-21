@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: label-studio
+    env: docker
+    plan: starter
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
