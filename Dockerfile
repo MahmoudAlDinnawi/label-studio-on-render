@@ -12,5 +12,7 @@ RUN pip install label-studio
 # Expose port
 EXPOSE 8080
 
+ENV DJANGO_CSRF_TRUSTED_ORIGINS=https://label-studio-on-render.onrender.com
+
 # Start app
 CMD ["label-studio", "start", "--host", "0.0.0.0", "--port", "8080"]
